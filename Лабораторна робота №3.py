@@ -1,9 +1,9 @@
 try:
     import random
-    array = [[0] * 5 for _ in range(5)]
-    for i in range(5):
-        for j in range(5):
-            array[i][j] = random.randint(1, 99)
+    rows = int(input('Введіть ціле число рядків масиву'))
+    columns = int(input('Введіть ціле число колонок масиву'))
+    array = [[random.randint(1, 99) for _ in range(columns)] for _ in range(rows)]
+    print("Початковий масив:")
     for row in array:
         for num in row:
             print(f"{-num:-^4}", end=' ')
